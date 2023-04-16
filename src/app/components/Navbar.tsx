@@ -1,8 +1,18 @@
+import SearchBox from "./SearchBox"
+import ScreenSelector from "./ScreenSelector"
+import dynamic from "next/dynamic";
+
+const DarkSwitch = dynamic(() => import('./DarkSwitch'), {
+  ssr: false,
+})
+
 function Navbar() {
   return (
-    <p>
-      Navbar
-    </p>
+    <div className='flex w-full justify-between'>
+      <SearchBox />
+      <ScreenSelector />
+      <DarkSwitch />
+    </div>
   )
 }
 
