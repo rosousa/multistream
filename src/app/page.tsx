@@ -1,11 +1,13 @@
 "use client"
 
-import { useStateContext } from "./context/ContextProvider"
-import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
+import { useStateContext } from './context/ContextProvider'
+import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
+import Main from './pages/Main';
 
 export default function Home() {
-  const {activeMenu, setActiveMenu} = useStateContext();
+  const {activeMenu, setActiveMenu} = useStateContext()
+  const {activeScreen, setActiveScreen} = useStateContext()
 
   return (
     <>
@@ -33,7 +35,7 @@ export default function Home() {
             )}
 
             <div key='hero' className='flex-1 w-full h-full dark:bg-[#121212]'>
-              i am hero
+              <Main />
             </div>
           </div>
         </div>

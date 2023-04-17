@@ -18,10 +18,8 @@ function Sidebar() {
 
   return (
     <div className='h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10'>
-      <div className='flex items-center mt-3 justify-end'>
-        <span>
-          Your Favorite
-        </span>
+      <div className='flex mt-3 justify-end items-center'>
+        Your Favorite
         <NavButton 
           title='menu' 
           customFunc={() => setActiveMenu((preActiveMenu: boolean) => !preActiveMenu)}
