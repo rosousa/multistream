@@ -42,29 +42,32 @@ function Main() {
         <div ref={refWidth} className='flex w-1/2 mr-1 bg-[#1b1b1b] 
         border border-[#1b1b1b] hover:border-blue-600
         justify-center items-center'
-        onClick={handleClick}
+        onClick={() => handleClick('1')}
         >
           screen1, {width}, {height}, active {activeScreen}
         </div>
         <div ref={refWidth} className='flex w-1/2 mr-1 bg-[#1b1b1b] 
         border border-[#1b1b1b] hover:border-blue-600
         justify-center items-center'
+        onClick={() => handleClick('2')}
         >
-          screen2
+          screen2, {width}, {height}, active {activeScreen}
         </div>
       </div>
       <div ref={refHeight} key='row2' className='flex w-full h-1/2 mr-1 ml-1 flex-nowrap'>
         <div ref={refWidth} className='flex w-1/2 mr-1 bg-[#1b1b1b] 
         border border-[#1b1b1b] hover:border-blue-600
         justify-center items-center'
+        onClick={() => handleClick('3')}
         >
-          screen3
+          screen3, {width}, {height}, active {activeScreen}
         </div>
         <div ref={refWidth} className='flex w-1/2 mr-1 bg-[#1b1b1b] 
         border border-[#1b1b1b] hover:border-blue-600
         justify-center items-center'
+        onClick={() => handleClick('4')}
         >
-          screen4
+          screen4, {width}, {height}, active {activeScreen}
         </div>
       </div>
     </div>
